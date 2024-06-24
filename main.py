@@ -54,6 +54,7 @@ headers = {
     # will not give an example for this because it has some sensitive details
 }
 
+# This payload is an example
 payload = {
     "captcha": "",
     "step": "",
