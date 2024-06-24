@@ -85,4 +85,4 @@ thread1.join()
 for thread in threads:
     thread.join()
 
-print(f"Go to https://safebrowsing.google.com/safebrowsing/report_phish and report the url")
+print(f"Go to https://safebrowsing.google.com/safebrowsing/report_phish/?hl=en and report the url")
