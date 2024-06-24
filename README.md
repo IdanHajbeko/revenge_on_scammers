@@ -39,7 +39,7 @@ Now, I want everyone to be able to stop these scammers. If each of us does this 
      - Copy the relevant information. You may need to copy the cookies to the headers (and maybe some other things). Put the data like username, credit card number, etc., in the data field in a JSON format.
      - Put the URL it is sending to in the appropriate place in your script.
 
-4. ##execute the code!!##
+4. **execute the code!!**
 
 ## Conclusion
 
