@@ -4,7 +4,6 @@ import requests
 import os
 import random
 import string
-import json
 import threading
 from faker import Faker
 
