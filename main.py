@@ -1,11 +1,14 @@
 # pip install requests
+# pip install Faker
 import requests
 import os
 import random
 import string
 import json
 import threading
+from faker import Faker
 
+fake = Faker()
 chars = string.ascii_letters + string.digits + '!@#$%^&*()'
 random.seed(os.urandom(1024))
 
@@ -26,11 +29,12 @@ def flush_database(url):
         "protonmail.com",
         "yandex.com"
     ]
-    names = json.loads(open('names.json').read())
 
-    for name in names:
+    for i in range(1000):
+        first_name = fake.first_name()
+        last_name = fake.last_name()
         name_extra = ''.join(random.choice(string.digits))
-        username = name.lower() + name_extra + "@" + random.choice(email_endings)
+        username = last_name + "." + first_name + name_extra + "@" + random.choice(email_endings)
         password = ''.join(random.choice(chars) for i in range(random.randint(8, 14)))
         requests.post(url, allow_redirects=False, data={
             'username': username,
@@ -54,7 +58,6 @@ headers = {
     # will not give an example for this because it has some sensitive details
 }
 
-# This payload is an example
 payload = {
     "captcha": "",
     "step": "",
